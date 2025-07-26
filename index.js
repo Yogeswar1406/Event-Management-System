@@ -35,6 +35,13 @@ app.get('/login', (req, res) => {
 app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, "dashboard.html"));
 });
+
+
+app.get('/admin', (req, res) => {
+    res.sendFile(path.join(__dirname, "admin_events.html"));
+});
+
+
 // ✅ Register User
 app.post("/register", (req, res) => {
     const { name, email, password } = req.body;
